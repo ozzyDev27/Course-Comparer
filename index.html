@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Course Comparer</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="mainWindow">
-        <div class="leftWindow">
-            
+        <div style="padding: 2vh;">
+            <select id="name1" style="min-width: 10vw;"></select>
+            <select id="name2" style="min-width: 10vw; margin-left:2vh;"></select>
         </div>
-        <div class="rightWindow">
-            
+        <div id="coursesDisplay" style="display: flex; gap: 4vh; justify-content: center; margin-top: 4vh;">
+            <div>
+                <ul id="courses1"></ul>
+            </div>
+            <div>
+                <ul id="courses2"></ul>
+            </div>
         </div>
     </div>
 </body>
-</html> 
+</html>

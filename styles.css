@@ -9,6 +9,8 @@ body {
 }
 
 .mainWindow {
+    position: relative;
+    z-index: 10;
     font-family: Arial, sans-serif;
     color: #333;
     width: 60vh;
@@ -17,31 +19,48 @@ body {
     margin: 20vh 20vw 10vh 20vw;
     left: auto;
     right: auto;
-
     background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(255, 255, 255, 0.3));
+    background-clip: padding-box;
     backdrop-filter: blur(10px) saturate(130%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
-    position: relative;
-    z-index: 10;
-
-    border: 1vh solid;
-    border-image: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3);
-    border-image-slice: 1;
-
+.mainWindow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #c1fffd, #7fc1ff, #b6e9ff);
+    padding: 0;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    padding: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    background-size: 200% 200%;
     animation: gradient-stroke 7s linear infinite;
+    padding: 1vh;
 }
 
 @keyframes gradient-stroke {
     0% {
-        border-image-source: linear-gradient(90deg, #ff7eb3, #75ffc3, #ff7eb3);
+        background-position: 0% 50%;
     }
     50% {
-        border-image-source: linear-gradient(90deg, #75ffc3, #ff7eb3, #75ffc3);
+        background-position: 100% 50%;
     }
     100% {
-        border-image-source: linear-gradient(90deg, #ff7eb3, #75ffc3, #ff7eb3);
+        background-position: 0% 50%;
     }
 }
 
@@ -49,7 +68,7 @@ html,
 html:before{
   --s: 56px;
   --g: 10px;
-  --c: #ECD078; 
+  --c: #39a7b1; 
   
   z-index:1;
   --_l: #0000 calc(33% - .866*var(--g)),var(--c) calc(33.2% - .866*var(--g)) 33%,#0000 34%;
@@ -58,7 +77,7 @@ html:before{
      0 calc(.866*var(--s) - var(--g)/2),
     conic-gradient(from -150deg at var(--g) 50%,var(--c) 120deg,#0000 0),
     linear-gradient(-120deg,var(--_l)),linear-gradient( -60deg,var(--_l))
-    #0B486B;
+    #044468;
   background-size: var(--s) calc(3.466*var(--s));
   animation: p infinite 2s linear;
 }
@@ -75,4 +94,38 @@ html:before {
   to {
     background-position-x: calc(-1*var(--s));
   }
+}
+
+select {
+    background: linear-gradient(90deg, #5798e2 0%, #61baff 100%);
+    border: 0.5vh solid #0b456f;
+    border-radius: 3vh;
+    color: #fff;
+    font-size: 2.2vh;
+    padding: 1.2vh 2.4vh;
+    margin: 1.2vh 0;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    box-shadow: 0 0.3vh 1.2vh rgba(0,0,0,0.08);
+    transition: border 0.2s;
+}
+
+select:focus {
+    border: 0.5vh solid #beebff;
+    outline: none;
+}
+
+option {
+    background: #6dc5eb;
+    color: #fff;
+}
+
+.name1, .name2 {
+  width: 28vh !important;
+  position: absolute;
+  min-width: 40vh;
+  max-width: 40vh;
+  box-sizing: border-box;
+  padding: 0;
 }
