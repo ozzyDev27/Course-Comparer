@@ -16,6 +16,10 @@ const data = {
     maya:   ["ICS3U1", "NBE3U5", "SBI3U5", "Break", "MHF4U5", "HSP3U1", "SPH3U5", "FSF4U1", "Break", "SCH3U5"],
     rishin: ["ENG4U5", "PSK4U1", "MDM4U1", "Break", "BBB4M1", "MCV4U5", "SBI4U1", "SPH4U1", "Break", "HSB4U1"],
     rosie:  ["MCR3U5", "SPH3U5", "FSF3U1", "Break", "ICS4UP", "AVI3M1", "MHF4U5", "ASM3M1", "Break", "CHW3MO"],
+    danielx:["SBI3U5", "MHF4UP", "NBE3U5", "Break", "ICS4UP", "TEJ3M1", "SCH3U5", "MCV4UP", "Break", "BAF3M1"],
+    alan:   ["SBI3U5", "MHF4UP", "CHA3U1", "Break", "ICS4UP", "SCH3U1", "FSF3U1", "MCV4UP", "Break", "NBE3U5"],
+    daniell:["SBI3U5", "MHF4UP", "SCH4UP", "Break", "NBE3U1", "SCH3U1", "AMI4M1", "MCV4UP", "Break", "ICU3U1"],
+    jeremy:  ["ICU3U1", "MHF4UP", "CHA3U1", "Break", "SCH3U5", "BAT4M1", "FSF3U1", "MCV4UP", "Break", "NBE3U5"],
 };
 const courses = {
     "Break": "Break",
@@ -25,7 +29,7 @@ const courses = {
     "ICS4U1": "Computer Science",
     "ICS3U1": "Computer Science",
     "ICS3UO": "Computer Science (Online)",
-    "BTA3OO": "ICT (Online)",
+    "BTA3OO": "Business Technology (Online)",
     "SCH4U1": "Chemistry",
     "SCH4UP": "Chemistry",
     "SCH3U5": "Chemistry",
@@ -45,7 +49,7 @@ const courses = {
     "NBE3U5": "English - Indigenous Voices",
     "FSF4U1": "French",
     "FSF3U1": "French",
-    "BAT4M1": "Business Leadership",
+    "BAT4M1": "Accounting",
     "BOH4M1": "Business Management",
     "BAF3M1": "Financial Accounting",
     "BAF3MO": "Financial Accounting (Online)",
@@ -69,6 +73,9 @@ const courses = {
     "AMS4ME": "Advanced Strings",
     "ENG4U1": "English",
     "SHC4U1": "World Religions",
+    "EMS3OO": "Media Studies (Online)",
+    "AMI3M1": "Music",
+    "AMI4M1": "Music",
     
 };
 
