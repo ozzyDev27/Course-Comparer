@@ -270,3 +270,9 @@ option {
   }
   
 }
+
+html.bg-static, html.bg-static:before {
+  background: #3a7fd7 !important;
+  animation: none !important;
+  background-image: none !important;
+}

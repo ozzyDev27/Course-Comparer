@@ -1,52 +1,54 @@
 const data = {
-    pikachu:    ["ENG3U", "MCR3U", "Break", "SPH3U", "ICS3U", "SCH3U", "ADA3M", "CGG3O", "PPZ3C", "Break"],
-    charizard:  ["ENG3U", "MCV4U", "SCH3U", "Break", "SBI3U", "AMM3M0", "CGG3O", "AWQ3M", "PPZ3C", "Break"],
-    bulbasaur:  ["SBI3U", "MCR3U", "ENG4U", "HZT4U", "Break", "ICS3U", "SCH4U", "AVI3M", "BAF3M0", "Break"],
-    gengar:     ["ENG3U", "SPH3U", "MCV4U", "Break", "HZT4U", "AWQ3M", "ASM3M", "ICS3U", "SCH3U", "Break"],
-    eevee:      ["ENG3C", "Break", "MAP4C", "ASM3M", "AVI3M", "BDI3C", "IDC4U", "CLU3M", "SCH3U", "Break"],
-    lucario:    ["MCV4U", "SPH4U", "ENG4U", "Break", "ICS4U", "SCH4U", "HZT4U", "AVI4M", "ADA3M", "Break"],
-    mimikyu:    ["ENG4U", "HZT4U", "Break", "AVI4M", "SCH4U", "MCV4U", "SPH4U", "ICS4U", "AMM3M0", "Break"],
-    garchomp:   ["SCH3U", "ENG3U", "SPH3U", "Break", "ADA3M", "MCR3U", "PPZ3C", "CGG3O", "Break", "ICS3U"],
-    snorlax:    ["SNC2D", "CHC2D", "ENG2D", "Break", "MPM2D", "AVI2O", "BTT2O", "ASM2O", "ICS2O", "Break"],
-    greninja:   ["MHF4U", "MCV4U", "ENG4U", "SPH4U", "Break", "ICS4U", "HZT4U", "AVI4M", "SBI3U", "Break"]
+    jamie:  ["TEJ4M1", "NBE3U5", "BTA3OO", "Break", "MHF4U5", "ICS4U1", "SPH3U5", "TTJ3C1", "Break", "SCH3U5"],
+    zach:   ["MCR3U5", "BAF3M1", "NBE3U5", "EMS3OO", "Break", "BAT4M1", "AMI3M1", "FSF4U1", "Break", "MHF4U5"],
+    miles:  ["ICS4U1", "SBI3U5", "BAF3MO", "Break", "SCH3U5", "AMS3MD", "MHF4U5", "SPH3U5", "Break", "NBE3U5"],
+    chris:  ["SCH4U1", "NBE3U5", "SPH4U1", "Break", "MHF4U5", "MCV4U5", "HFA4U1", "ENG4U5", "Break", "SBI4U1"],
+    ahana:  ["SBI4UP", "MHF4UP", "SCH4UP", "ICS3UO", "Break", "SPH3U5", "MCV4UP", "COP3O8", "COP3O8", "Break"],
+    jude:   ["ICS3U1", "MHF4UP", "NBE3U5", "Break", "AMS3ME", "SBI3U5", "SPH3U5", "MCV4UP", "Break", "SCH3U5"],
+    kendall:["CLU3M1", "NBE3U5", "SCH4UP", "IDC4U1", "Break", "SBI3U5", "SPH3U5", "MCR3U5", "PAF3O1", "Break"],
+    jenny:  ["SCH4U1", "MHF4UP", "BMI3C1", "Break", "TEJ3M1", "BAT4M1", "SPH3U5", "MCV4UP", "Break", "BOH4M1"],
+    neel:   ["TTJ3C1", "ICS4U1", "NBE3U5", "Break", "SCH3U5", "TEJ3M1", "MHF4U5", "SPH3U5", "Break", "Break"],
+    izzy:   ["MCR3U5", "SPH3U5", "NBE3U5", "Break", "TWJ3E1", "AVI3M1", "MHF4U5", "SBI3U5", "Break", "SCH3U5"],
+    noahj:  ["MCR3U5", "BAF3M1", "SBI3U5", "Break", "SCH3U5", "HFC3M1", "SPH3U5", "AMM3MO", "Break", "NBE3U5"],
+    amia:   ["SBI4UP", "MHF4UP", "FSF3U1", "Break", "SCH3U5", "SPH3U1", "CHA3UO", "MCV4UP", "Break", "NBE3U5"],
 };
 
 const courses = {
     "Break": "Break",
-    "ENG3U": "English",
-    "MCR3U": "Functions",
-    "SPH3U": "Physics",
-    "ICS3U": "Computer Science",
-    "SCH3U": "Chemistry",
-    "ADA3M": "Computer Programming",
-    "CGG3O": "Geography",
-    "PPZ3C": "Health for Life",
-    "MCV4U": "Calculus and Vectors",
-    "SBI3U": "Biology",
-    "AWQ3M": "Photography",
-    "ASM3M": "Media Arts",
-    "HZT4U": "Philosophy",
-    "SCH4U": "Chemistry",
-    "AVI3M": "Visual Arts",
-    "ICS4U": "Computer Science",
-    "SPH4U": "Physics",
-    "ENG4U": "English",
-    "MAP4C": "Mathematics",
-    "BDI3C": "Entrepreneurship",
-    "IDC4U": "Interdisciplinary Studies",
-    "CLU3M": "Law",
-    "AVI4M": "Visual Arts",
-    "SNC2D": "Science",
-    "CHC2D": "Canadian History",
-    "ENG2D": "English",
-    "MPM2D": "Mathematics",
-    "AVI2O": "Visual Arts",
-    "BTT2O": "Information Technology",
-    "ASM2O": "Media Arts",
-    "ICS2O": "Computer Science",
-    "BTA3O0": "ICT (Online)",
-    "AMM3M0": "Music and Computers (Online)",
-    "BAF3M0": "Financial Accounting (Online)"
+    "TEJ4M1": "Computer Engineering",
+    "NBE3U5": "English - Indigenous Voices",
+    "BTA3OO": "ICT (Online)",
+    "MHF4U5": "Advanced Functions",
+    "ICS4U1": "Computer Science",
+    "SPH3U5": "Physics",
+    "TTJ3C1": "Transportation Technology",
+    "SCH3U5": "Chemistry",
+    "MCR3U5": "Functions",
+    "BAF3M1": "Financial Accounting",
+    "EMS3OO": "Media Studies (Online)",
+    "BAT4M1": "Business Leadership",
+    "AMI3M1": "Instrumental Music",
+    "FSF4U1": "French",
+    "AMS3MD": "Media Studies",
+    "SBI3U5": "Biology",
+    "ENG4U5": "English",
+    "HFA4U1": "Nutrition and Health",
+    "MCV4U5": "Calculus and Vectors",
+    "SBI4U1": "Biology",
+    "SCH4U1": "Chemistry",
+    "SPH4U1": "Physics",
+    "IDC4U1": "Interdisciplinary Studies",
+    "TWJ3E1": "Custom Woodworking",
+    "AVI3M1": "Visual Arts",
+    "HFC3M1": "Food and Culture",
+    "AMM3MO": "Music & Computers (Online)",
+    "CHA3UO": "Canadian History (Online)",
+    "CHA3U": "Canadian History",
+    "FSF3U1": "French",
+    "TEJ3M1": "Computer Engineering",
+    "BMI3C1": "Marketing",
+    "BOH4M1": "Business Management",
+    "CLU3M1": "Law"
 };
 
 function populateDropdown(select, names) {
@@ -66,7 +68,6 @@ function isOnlineCourse(code) {
 
 function showCourses(name, courseCodes, listElem, compareCodes) {
     listElem.innerHTML = '';
-    // Split into two semesters: first five and last five
     const semesters = [courseCodes.slice(0, 5), courseCodes.slice(5, 10)];
     semesters.forEach((semester, idx) => {
         const ul = document.createElement('ul');
@@ -93,12 +94,6 @@ function showCourses(name, courseCodes, listElem, compareCodes) {
             }
             li.dataset.code = code;
             li.dataset.name = courseName;
-            li.addEventListener('mouseenter', function() {
-                li.textContent = code;
-            });
-            li.addEventListener('mouseleave', function() {
-                li.textContent = courseName;
-            });
             ul.appendChild(li);
         }
         listElem.appendChild(ul);
@@ -128,4 +123,48 @@ document.addEventListener('DOMContentLoaded', () => {
     name1Sel.selectedIndex = 0;
     name2Sel.selectedIndex = names.length > 1 ? 1 : 0;
     updateCourses();
+
+    const mainWindow = document.querySelector('.mainWindow');
+    const toggleDiv = document.createElement('div');
+    toggleDiv.style.position = 'absolute';
+    toggleDiv.style.top = '2vh';
+    toggleDiv.style.right = '2vh';
+    toggleDiv.style.zIndex = '30';
+    toggleDiv.innerHTML = `
+        <label style="display:flex;align-items:center;gap:0.5em;cursor:pointer;font-size:2vh;">
+            <input type="checkbox" id="bgAnimToggle" style="width:2vh;height:2vh;"> Background Animation (ik this is ugly it was a quick patch)
+        </label>
+    `;
+    mainWindow.appendChild(toggleDiv);
+
+    const bgAnimToggle = document.getElementById('bgAnimToggle');
+
+    function setBgAnimation(on) {
+        if (on) {
+            document.documentElement.classList.remove('bg-static');
+        } else {
+            document.documentElement.classList.add('bg-static');
+        }
+    }
+
+    setBgAnimation(false);
+
+    bgAnimToggle.addEventListener('change', (e) => {
+        setBgAnimation(e.target.checked);
+    });
+
+    document.addEventListener('mouseover', function(e) {
+        if (e.target && e.target.matches('.courses-list li')) {
+            if (e.target.dataset.code) {
+                e.target.textContent = e.target.dataset.code;
+            }
+        }
+    });
+    document.addEventListener('mouseout', function(e) {
+        if (e.target && e.target.matches('.courses-list li')) {
+            if (e.target.dataset.name) {
+                e.target.textContent = e.target.dataset.name;
+            }
+        }
+    });
 });
