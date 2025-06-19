@@ -165,16 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mainWindow = document.querySelector('.mainWindow');
     const toggleDiv = document.createElement('div');
-    toggleDiv.style.position = 'absolute';
-    toggleDiv.style.top = '2vh';
-    toggleDiv.style.right = '2vh';
-    toggleDiv.style.zIndex = '30';
+    toggleDiv.style.position = 'fixed';
+    toggleDiv.style.top = '1vh';
+    toggleDiv.style.left = '1vh';
+    toggleDiv.style.zIndex = '100';
     toggleDiv.innerHTML = `
         <label style="display:flex;align-items:center;gap:0.5em;cursor:pointer;font-size:2vh;">
-            <input type="checkbox" id="bgAnimToggle" style="width:2vh;height:2vh;"> Background Animation (ik this is ugly it was a quick patch)
+            <input type="checkbox" id="bgAnimToggle" style="width:2vh;height:2vh;">
         </label>
     `;
-    mainWindow.appendChild(toggleDiv);
+    document.body.appendChild(toggleDiv);
 
     const bgAnimToggle = document.getElementById('bgAnimToggle');
 
