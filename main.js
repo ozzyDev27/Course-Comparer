@@ -1,9 +1,9 @@
 const data = {
     jamie:  ["TEJ4M1", "NBE3U5", "BTA3OO", "Break", "MHF4U5", "ICS4U1", "SPH3U5", "TTJ3C1", "Break", "SCH3U5"],
-    zach:   ["MCR3U5", "BAF3M1", "NBE3U5", "EMS3OO", "Break", "BAT4M1", "AMI3M1", "FSF4U1", "Break", "MHF4U5"],
-    miles:  ["ICS4U1", "SBI3U5", "BAF3MO", "Break", "SCH3U5", "AMS3MD", "MHF4U5", "SPH3U5", "Break", "NBE3U5"],
-    chris:  ["SCH4U1", "NBE3U5", "SPH4U1", "Break", "MHF4U5", "MCV4U5", "HFA4U1", "ENG4U5", "Break", "SBI4U1"],
     ahana:  ["SBI4UP", "MHF4UP", "SCH4UP", "ICS3UO", "Break", "Break", "SPH3U5", "MCV4UP", "COP3O8", "COP3O8"],
+    zach:   ["MCR3U5", "BAF3M1", "NBE3U5", "EMS3OO", "Break", "BAT4M1", "AMI3M1", "FSF4U1", "Break", "MHF4U5"],
+    miles:  ["Break","ICS4U1", "SBI3U5",  "Break", "SCH3U5", "AMS3MD", "MHF4U5", "SPH3U5", "Break", "NBE3U5"],
+    chris:  ["SCH4U1", "NBE3U5", "SPH4U1", "Break", "MHF4U5", "MCV4U5", "HFA4U1", "ENG4U5", "Break", "SBI4U1"],
     jude:   ["ICS3U1", "MHF4UP", "NBE3U5", "Break", "AMS3ME", "SBI3U5", "SPH3U5", "MCV4UP", "Break", "SCH3U5"],
     kendall:["CLU3M1", "NBE3U5", "SCH4UP", "IDC4U1", "Break", "SBI3U5", "SPH3U5", "MCR3U5", "PAF3O1", "Break"],
     jenny:  ["SCH4U1", "MHF4UP", "BMI3C1", "Break", "TEJ3M1", "BAT4M1", "SPH3U5", "MCV4UP", "Break", "BOH4M1"],
@@ -24,11 +24,16 @@ const data = {
     robbie: ["MCR3U5", "SPH3U5", "BMI3C1", "Break", "AMM3MO", "SCH4U1", "MHF4U5", "ICS3U1", "Break", "NBE3U5"],
     caitlyn:["SBI4UP", "BAF3M1", "NBE3U5", "Break", "MCR3U5", "HFC3M1", "SPH3U5", "FSF4U1", "Break", "SCH3U5"],
 };
+names = {
+    noahj: "Noah J.",
+    daniell: "Daniel L.",
+    danielx: "Daniel X.",
+}
 const courses = {
     "Break": "Break",
     "TEJ4M1": "Computer Engineering",
     "TEJ3M1": "Computer Engineering",
-    "TTJ3C1": "Transportation Technology",
+    "TTJ3C1": "Auto Tech",
     "ICS4U1": "Computer Science",
     "ICS3U1": "Computer Science",
     "ICS3UO": "Computer Science (Online)",
@@ -49,15 +54,15 @@ const courses = {
     "MCV4UP": "Calculus and Vectors",
     "MCR3U5": "Functions",
     "ENG4U5": "English",
-    "NBE3U5": "English - Indigenous Voices",
+    "NBE3U5": "English",
     "FSF4U1": "French",
     "FSF3U1": "French",
     "BAT4M1": "Accounting",
     "BOH4M1": "Business Management",
     "BAF3M1": "Financial Accounting",
     "BAF3MO": "Financial Accounting (Online)",
-    "AMS3MD": "Media Studies",
-    "AMS3ME": "Media Studies (English Stream)",
+    "AMS3MD": "Intermediate Strings",
+    "AMS3ME": "Intermediate Strings",
     "BMI3C1": "Marketing",
     "IDC4U1": "Health Psychology",
     "CLU3M1": "Law",
@@ -67,7 +72,7 @@ const courses = {
     "HFC3M1": "Food and Culture",
     "AMM3MO": "Music & Computers (Online)",
     "CHA3UO": "Canadian History (Online)",
-    "COP308": "Co-Op",
+    "COP3O8": "Co-Op",
     "PAF301": "Personal Fitness",
     "SPH3U1": "Physics",
     "MCV4U1": "Calculus and Vectors",
@@ -83,13 +88,18 @@ const courses = {
 };
 
 
-function populateDropdown(select, names) {
+function capitalize(str) {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function populateDropdown(select, nameList) {
     select.innerHTML = '';
-    for (const name of names) {
+    for (const name of nameList) {
         if (!name) continue;
         const opt = document.createElement('option');
         opt.value = name;
-        opt.textContent = name;
+        opt.textContent = names[name] || capitalize(name);
         select.appendChild(opt);
     }
 }
@@ -158,16 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mainWindow = document.querySelector('.mainWindow');
     const toggleDiv = document.createElement('div');
-    toggleDiv.style.position = 'absolute';
-    toggleDiv.style.top = '2vh';
-    toggleDiv.style.right = '2vh';
-    toggleDiv.style.zIndex = '30';
+    toggleDiv.style.position = 'fixed';
+    toggleDiv.style.top = '1vh';
+    toggleDiv.style.left = '1vh';
+    toggleDiv.style.zIndex = '100';
     toggleDiv.innerHTML = `
         <label style="display:flex;align-items:center;gap:0.5em;cursor:pointer;font-size:2vh;">
-            <input type="checkbox" id="bgAnimToggle" style="width:2vh;height:2vh;"> Background Animation (ik this is ugly it was a quick patch)
+            <input type="checkbox" id="bgAnimToggle" style="width:2vh;height:2vh;">
         </label>
     `;
-    mainWindow.appendChild(toggleDiv);
+    document.body.appendChild(toggleDiv);
 
     const bgAnimToggle = document.getElementById('bgAnimToggle');
 
