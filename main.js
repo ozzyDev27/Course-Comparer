@@ -19,7 +19,10 @@ const data = {
     danielx:["SBI3U5", "MHF4UP", "NBE3U5", "Break", "ICS4UP", "TEJ3M1", "SCH3U5", "MCV4UP", "Break", "BAF3M1"],
     alan:   ["SBI3U5", "MHF4UP", "CHA3U1", "Break", "ICS4UP", "SCH3U1", "FSF3U1", "MCV4UP", "Break", "NBE3U5"],
     daniell:["SBI3U5", "MHF4UP", "SCH4UP", "Break", "NBE3U1", "SCH3U1", "AMI4M1", "MCV4UP", "Break", "ICU3U1"],
-    jeremy:  ["ICU3U1", "MHF4UP", "CHA3U1", "Break", "SCH3U5", "BAT4M1", "FSF3U1", "MCV4UP", "Break", "NBE3U5"],
+    jeremy: ["ICU3U1", "MHF4UP", "CHA3U1", "Break", "SCH3U5", "BAT4M1", "FSF3U1", "MCV4UP", "Break", "NBE3U5"],
+    sophia: ["MCR3U5", "NBE3U5", "TDA3M1", "Break", "SCH3U5", "SBI3U5", "SPH3U5", "FSF4U1", "Break", "ICS3U1"],
+    robbie: ["MCR3U5", "SPH3U5", "BMI3C1", "Break", "AMM3MO", "SCH4U1", "MHF4U5", "ICS3U1", "Break", "NBE3U5"],
+    caitlyn:["SBI4UP", "BAF3M1", "NBE3U5", "Break", "MCR3U5", "HFC3M1", "SPH3U5", "FSF4U1", "Break", "SCH3U5"],
 };
 const courses = {
     "Break": "Break",
